@@ -4,6 +4,7 @@ using System.Collections;
 namespace CollectionsApplications
 {
 	// These should be moved to a different file
+	enum Type { Normal, Fighting, Flying, Poison, Ground, Rock, Bug, Ghost, Steel, Fire, Water, Grass, Electric, Psychic, Ice, Dragon, Dark, Fairy, Neutral };
 	enum Gender { Male, Female, None };
 	enum NonVolatileStatus { Healthy, Burn, Freeze, Paralyze, Sleep, Poison, Toxic, Fainted };
 	delegate void fptrMove(Pokemon pokemon);
