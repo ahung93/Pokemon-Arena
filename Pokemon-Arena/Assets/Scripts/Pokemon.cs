@@ -3,6 +3,7 @@ using System.Collections;
 
 namespace CollectionsApplications
 {
+	// These should be moved to a different file
 	enum Gender { Male, Female, None };
 	enum NonVolatileStatus { Healthy, Burn, Freeze, Paralyze, Sleep, Poison, Toxic, Fainted };
 	delegate void fptrMove(Pokemon pokemon);
@@ -60,23 +61,23 @@ namespace CollectionsApplications
 		}
 
 		public void useMove1(){
-			if (fptrMove[0] != null)
-				fptrMove [0] (this);
+			if (moves[0] != null)
+				moves[0] (this);
 		}
 
 		public void useMove2(){
-			if (fptrMove[1] != null)
-				fptrMove [1] (this);
+			if (moves[1] != null)
+				moves[1] (this);
 		}
 
 		public void useMove3(){
-			if (fptrMove[2] != null)
-				fptrMove [2] (this);
+			if (moves[2] != null)
+				moves[2] (this);
 		}
 
 		public void useMove4(){
-			if (fptrMove[3] != null)
-				fptrMove [3] (this);
+			if (moves[3] != null)
+				moves[3] (this);
 		}
 	}
 }
