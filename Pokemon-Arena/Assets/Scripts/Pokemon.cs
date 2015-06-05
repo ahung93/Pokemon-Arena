@@ -6,6 +6,8 @@ namespace CollectionsApplications
 	class Pokemon {
 
 		private string species;
+
+		private int speciesNum;
 		// May need to modify to include other status
 		private enum NonVolatileStatus { Healthy, Burn, Freeze, Paralyze, Sleep, Poison, Toxic, Fainted };
 
