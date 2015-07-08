@@ -10,7 +10,7 @@ namespace CollectionsApplications
 	delegate void fptrMove(Pokemon pokemon);
 
 
-	class Pokemon {
+	public class Pokemon : MonoBehaviour {
 		private string name;
 
 		private string species;
@@ -33,6 +33,10 @@ namespace CollectionsApplications
 		private string ability;
 
 		private int happiness;
+
+		private int currentHealth;
+
+		private int maxHealth;
 
 		// Base Stats
 		private Hashtable stats;
@@ -57,10 +61,57 @@ namespace CollectionsApplications
 
 		// May need to modify to include other status
 
+		void Update() {
+			checkHealth ();
+			checkStatus ();
+			movePokemon ();
+			attackPokemon ();
+		}
+
 		public Pokemon() {
 			// Figure out how to parse JSON data 
 		}
 
+		public void checkHealth(){
+			if (currentHealth <= 0) {
+				// faint();
+				// switchout();
+			}
+		}
+
+		public void checkStatus(){
+			// Checks for paralysis, burn, poison, etc
+		}
+
+		public void movePokemon() {
+			// Update position and orientation
+			// Animation?
+		}
+
+		public void attackPokemon() {
+			/*
+			 *  if move1button == true 
+			 *    startCooldown
+			 *    lock pokemon movement and animation
+			 *    useMove1
+			 *  else if move2button == true
+			 *    startCooldown
+			 *    lock pokemon movement and animation
+			 *    useMove2
+			 *  else if move3button == true
+			 *    startCooldown
+			 *    lock pokemon movement and animation
+			 *    useMove3
+			 *  else if move4button == true
+			 *    startCooldown
+			 *    lock pokemon movement and animation
+			 *    useMove4
+			 */ 
+		}
+
+
+
+		// Change to coroutines (Function that actions over several updates)
 		public void useMove1(){
 			if (moves[0] != null)
 				moves[0] (this);
